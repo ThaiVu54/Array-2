@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 4: Viết một chương trình để đếm số từ trong một chuỗi-->
+<script>
+    // function WordCount(str) {
+    //     var totalSoFar = 0;
+    //     for (var i = 0; i < WordCount.length; i++)
+    //         if (str(i) === " ") { // if a space is found in str
+    //             totalSoFar = +1; // add 1 to total so far
+    //         }
+    //     totalsoFar += 1; // add 1 to totalsoFar to account for extra space since 1 space = 2 words
+    // }
+    //
+    // console.log(WordCount("Random String"));
+
+
+    // function WordCount(str) {
+    //     return str.split(" ").length;
+    // }
+    //
+    // document.write(WordCount("i trust in you"));
+
+    function demSoTu(){
+        let nhapTu = prompt("Để xem bạn nhập được bao nhiêu từ (Các từ được ngăn bởi dấu cách)");
+        let demTu = [];
+        for(let i = 0; i < nhapTu.length; i++){
+            if (nhapTu[i] == " ") {
+                if (nhapTu[i+1] == " ") {
+                    continue;
+                }else demTu.push(nhapTu[i]);
+            }
+        }
+        if (nhapTu[nhapTu.length-1] == " " && nhapTu[0] == " ") {
+            demTu.length --;
+        }
+        if (nhapTu[nhapTu.length-1] != " " && nhapTu[0] != " ") {
+            demTu.length++;
+        }
+        document.write("<h2>Bạn vừa nhập vào: "+nhapTu+"<br>Có tổng cộng "+demTu.length+" từ</h2>");
+    }
+    demSoTu();
+
+</script>
+</body>
+</html>
