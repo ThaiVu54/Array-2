@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.-->
+<script>
+    // let n;
+
+    function inputArr(a) {
+        let n;
+        // let a = []
+        do {
+            n = +prompt("Enter the size of the array")
+        } while (n <= 0)
+        for (let i = 0; i < n; i++) {
+            a[i] = prompt("nhap vao gia tri thu " + i + ":")
+        }
+    }
+
+    function count(a) { //ham so luong trong mang
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (isNaN(a[i]) === false) {
+                count++;
+            }
+        }
+        return count
+    }
+    let array = [];
+    inputArr(array)
+    document.write("so chu so trong mang: " + count(array))
+
+</script>
+</body>
+</html>
