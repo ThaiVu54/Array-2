@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+<script>
+    let str1 = prompt("enter string 1: ")
+    let arr1 = str1.split(" ") //chuyen chuoi sang dang mang
+    let str2 = prompt("enter string 2: ")
+    let arr2 = str2.split(" ")
+    check = true
+    if (str1.length === str2.length) {
+        for (let i = 0; i < str1.length; i++) {
+            if (arr1[i] === arr2[i]) {
+                check = true;
+            }
+        }
+    }else check = false;
+    if(check === true){
+        alert("2 chuoi giong nhau")
+    }else alert("2 chuoi khac nhau")
+
+</script>
+</body>
+</html>
